@@ -6,15 +6,28 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * I modified this class to draw a picture representing a Minecraft player
+ * and a Creeper encountering each other on a sunny day.
+ * 
+ * @author  Michael Biondi
+ * @version 2024.09.10
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
+    private Circle grass;
     private Circle sun;
+    
+    private Person player;
+    private Triangle hat;
+    
+    private Square creeperHead;
+    private Square creeperBody;
+    private Square creeperLegs;
+    
+    private Square mouthLeft;
+    private Square mouthMiddle;
+    private Square mouthRight;
+    
     private boolean drawn;
 
     /**
@@ -22,10 +35,16 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
+        grass = new Circle();
         sun = new Circle();
+        player = new Person();
+        hat = new Triangle();  
+        creeperHead = new Square();
+        creeperBody = new Square();
+        creeperLegs = new Square();
+        mouthLeft = new Square();
+        mouthMiddle = new Square();
+        mouthRight = new Square();
         drawn = false;
     }
 
