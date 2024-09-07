@@ -54,27 +54,27 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            grass.changeColor("green");
+            grass.moveVertical(170);
+            grass.changeSize(500);
+            grass.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
+            player.changeColor("black");
+            player.moveHorizontal(-120);
+            player.moveVertical(40);
+            player.makeVisible();
+            
+            hat.changeColor("orange");
+            hat.moveHorizontal(20);
+            hat.moveVertical(-60);
+            hat.makeVisible();
     
             sun.changeColor("yellow");
-            sun.moveHorizontal(100);
+            sun.moveHorizontal(-100);
             sun.moveVertical(-40);
-            sun.changeSize(80);
+            sun.changeSize(60);
             sun.makeVisible();
+            
             drawn = true;
         }
     }
@@ -84,9 +84,9 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
+        grass.changeColor("black");
+        player.changeColor("black");
+        hat.changeColor("black");
         sun.changeColor("black");
     }
 
@@ -95,9 +95,9 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
+        grass.changeColor("green");
+        player.changeColor("black");
+        hat.changeColor("orange");
         sun.changeColor("yellow");
     }
 }
