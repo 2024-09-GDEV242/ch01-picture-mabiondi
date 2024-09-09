@@ -55,18 +55,21 @@ public class Picture
     {
         if(!drawn) {
             grass.changeColor("green");
-            grass.moveVertical(170);
-            grass.changeSize(500);
+            grass.moveHorizontal(-420);
+            grass.moveVertical(100);
+            grass.changeSize(900);
             grass.makeVisible();
             
             player.changeColor("black");
-            player.moveHorizontal(-120);
-            player.moveVertical(40);
+            player.moveHorizontal(-150);
+            player.moveVertical(-20);
+            player.changeSize(100, 50);
             player.makeVisible();
             
             hat.changeColor("orange");
             hat.moveHorizontal(20);
             hat.moveVertical(-60);
+            hat.changeSize(30, 60);
             hat.makeVisible();
     
             sun.changeColor("yellow");
