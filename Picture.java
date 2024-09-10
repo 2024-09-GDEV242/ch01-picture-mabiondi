@@ -14,6 +14,7 @@
  */
 public class Picture
 {
+    private Square sky;
     private Circle grass;
     private Circle sun;
     
@@ -21,11 +22,13 @@ public class Picture
     private Triangle hat;
     
     private Square creeperHead;
-    private Square creeperBody;
-    private Square creeperLegs;
+    private Person creeperBody;
+    
+    private Square eyeLeft;
+    private Square eyeRight;
     
     private Square mouthLeft;
-    private Square mouthMiddle;
+    private Square mouthCenter;
     private Square mouthRight;
     
     private boolean drawn;
@@ -35,15 +38,17 @@ public class Picture
      */
     public Picture()
     {
+        sky = new Square();
         grass = new Circle();
         sun = new Circle();
         player = new Person();
         hat = new Triangle();  
         creeperHead = new Square();
-        creeperBody = new Square();
-        creeperLegs = new Square();
+        creeperBody = new Person();
+        eyeLeft = new Square();
+        eyeRight = new Square();
         mouthLeft = new Square();
-        mouthMiddle = new Square();
+        mouthCenter = new Square();
         mouthRight = new Square();
         drawn = false;
     }
@@ -54,6 +59,12 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+            sky.changeColor("blue");
+            sky.moveHorizontal(-400);
+            sky.moveVertical(-200);
+            sky.changeSize(600);
+            sky.makeVisible();
+            
             grass.changeColor("green");
             grass.moveHorizontal(-420);
             grass.moveVertical(100);
@@ -67,16 +78,58 @@ public class Picture
             player.makeVisible();
             
             hat.changeColor("orange");
-            hat.moveHorizontal(20);
-            hat.moveVertical(-60);
-            hat.changeSize(30, 60);
+            hat.moveHorizontal(-80);
+            hat.moveVertical(-15);
+            hat.changeSize(25, 60);
             hat.makeVisible();
     
             sun.changeColor("yellow");
             sun.moveHorizontal(-100);
-            sun.moveVertical(-40);
+            sun.moveVertical(-60);
             sun.changeSize(60);
             sun.makeVisible();
+            
+            creeperHead.changeColor("lightgreen");
+            creeperHead.moveHorizontal(40);
+            creeperHead.moveVertical(15);
+            creeperHead.changeSize(50);
+            creeperHead.makeVisible();
+            
+            creeperBody.changeColor("lightgreen");
+            creeperBody.moveHorizontal(95);
+            creeperBody.moveVertical(-20);
+            creeperBody.changeSize(105, 30);
+            creeperBody.makeVisible();
+            
+            eyeLeft.changeColor("black");
+            eyeLeft.moveHorizontal(45);
+            eyeLeft.moveVertical(25);
+            eyeLeft.changeSize(13);
+            eyeLeft.makeVisible();
+            
+            eyeRight.changeColor("black");
+            eyeRight.moveHorizontal(70);
+            eyeRight.moveVertical(25);
+            eyeRight.changeSize(13);
+            eyeRight.makeVisible();
+            
+            mouthCenter.changeColor("black");
+            mouthCenter.moveHorizontal(60);
+            mouthCenter.moveVertical(45);
+            mouthCenter.changeSize(8);
+            mouthCenter.makeVisible();
+            
+            mouthLeft.changeColor("black");
+            mouthLeft.moveHorizontal(56);
+            mouthLeft.moveVertical(50);
+            mouthLeft.changeSize(6);
+            mouthLeft.makeVisible();
+            
+            mouthRight.changeColor("black");
+            mouthRight.moveHorizontal(66);
+            mouthRight.moveVertical(50);
+            mouthRight.changeSize(6);
+            mouthRight.makeVisible();
             
             drawn = true;
         }
@@ -87,10 +140,19 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
+        sky.changeColor("white");
         grass.changeColor("black");
         player.changeColor("black");
         hat.changeColor("black");
         sun.changeColor("black");
+        
+        creeperHead.changeColor("black");
+        creeperBody.changeColor("black");
+        eyeLeft.changeColor("white");
+        eyeRight.changeColor("white");
+        mouthLeft.changeColor("white");
+        mouthCenter.changeColor("white");
+        mouthRight.changeColor("white");
     }
 
     /**
@@ -98,9 +160,18 @@ public class Picture
      */
     public void setColor()
     {
+        sky.changeColor("blue");
         grass.changeColor("green");
         player.changeColor("black");
         hat.changeColor("orange");
         sun.changeColor("yellow");
+        
+        creeperHead.changeColor("lightgreen");
+        creeperBody.changeColor("lightgreen");
+        eyeLeft.changeColor("black");
+        eyeRight.changeColor("black");
+        mouthLeft.changeColor("black");
+        mouthCenter.changeColor("black");
+        mouthRight.changeColor("black");
     }
 }

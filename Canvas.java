@@ -6,10 +6,13 @@ import java.util.*;
 /**
  * Canvas is a class to allow for simple graphical drawing on a canvas.
  * This is a modification of the general purpose Canvas, specially made for
- * the BlueJ "shapes" example. 
+ * the BlueJ "shapes" example.
+ * 
+ * Michael Biondi September 2024: Added "lightgreen" and "orange" colors.
  *
  * @author: Bruce Quig
  * @author: Michael Kšlling (mik)
+ * @author: Michael Biondi
  *
  * @version 2016.02.29
  */
